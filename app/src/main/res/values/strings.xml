@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+
+    <string name="songs_by_title">SongsByTitle</string>
+    <string name="songs_by_artist">SongsByArtist</string>
+    <string name="songs_by_album">SongsByAlbum</string>
+    <string name="title_activity_by_title">byTitle</string>
+    <string name="title_activity_by_artist">byArtist</string>
+    <string name="title_activity_by_album">byAlbun</string>
+
+
+
+</resources>

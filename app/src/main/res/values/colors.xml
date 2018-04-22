@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!--color app bar -->
+    <color name="primary_color">#AD1457</color>
+
+    <!--color status bar -->
+    <color name="primary_dark_color">#880E4F</color>
+
+    <!--color app background -->
+    <color name="app_background">#F3E5F5</color>
+
+    <!--color play songs by title -->
+    <color name="songs_by_title">#C62828</color>
+
+    <!--color play songs by artist-->
+    <color name="songs_by_artist">#004D40</color>
+
+    <!--color play songs by album-->
+    <color name="songs_by_album">#D81B60</color>
+
+
+</resources>
