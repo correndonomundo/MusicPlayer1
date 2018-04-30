@@ -1,7 +1,10 @@
 package com.example.android.MusicPlayer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,6 +35,12 @@ public class byTitleActivity extends AppCompatActivity {
 
         listView.setAdapter(Adapter);
 
+        // Find the View that shows the colors category
+        ListView songsList = (ListView) findViewById(R.id.songs_list);
+
+
     }
+
+
 }
 

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    public SongAdapter(Activity context, ArrayList<Song> words) {
-        super(context, 0,words);
+    public SongAdapter(Activity context, ArrayList<Song> songs) {
+        super(context, 0,songs);
     }
 
     @Override
@@ -24,19 +24,19 @@ public class SongAdapter extends ArrayAdapter<Song> {
         }
 
 
-        Song currentWord = getItem(position);
+        Song currentSong = getItem(position);
 
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.by_title_text_view);
 
-        titleTextView.setText(currentWord.getdisplayTitle());
+        titleTextView.setText(currentSong.getdisplayTitle());
 
         TextView artistTextView = (TextView) listItemView.findViewById(R.id.by_artist_text_view);
 
-        artistTextView.setText(currentWord.getdisplayArtist());
+        artistTextView.setText(currentSong.getdisplayArtist());
 
         TextView albumTextView = (TextView) listItemView.findViewById(R.id.by_album_text_view);
 
-        albumTextView.setText(currentWord.getdisplayAlbum());
+        albumTextView.setText(currentSong.getdisplayAlbum());
 
         return listItemView;
     }

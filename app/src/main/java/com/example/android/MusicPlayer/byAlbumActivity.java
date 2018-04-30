@@ -1,8 +1,13 @@
 package com.example.android.MusicPlayer;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 import java.util.ArrayList;
 
@@ -32,6 +37,23 @@ public class byAlbumActivity extends AppCompatActivity {
 
         listView.setAdapter(Adapter);
 
+        // Find the View that shows the colors category
+        ListView songsList = (ListView) findViewById(R.id.songs_list);
+
+
+
+        listView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Create a new intent to open the {@link ColorsActivity}
+                Intent playerIntent = new Intent(byAlbumActivity.this, playerActivity.class);
+                playerActivity.currentSong = view;
+
+                // Start the new activity
+                startActivity(playerIntent);
+
+            }
+        });
     }
 }
 

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
@@ -26,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, com.example.android.MusicPlayer.byTitleActivity.class);
+                Intent byAlbumIntent = new Intent(MainActivity.this, com.example.android.MusicPlayer.byTitleActivity.class);
 
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(byAlbumIntent);
             }
         });
 
@@ -42,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, byArtistActivity.class);
+                Intent byTitleIntent = new Intent(MainActivity.this, byArtistActivity.class);
 
                 // Start the new activity
-                startActivity(familyIntent);
+                startActivity(byTitleIntent);
             }
         });
 
@@ -58,14 +60,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link ColorsActivity}
-                Intent colorsIntent = new Intent(MainActivity.this, byAlbumActivity.class);
+                Intent byArtistIntent = new Intent(MainActivity.this, byAlbumActivity.class);
 
                 // Start the new activity
-                startActivity(colorsIntent);
+                startActivity(byArtistIntent);
             }
         });
 
-        // Find the View that shows the phrases category
 
-    }
+     }
 }
