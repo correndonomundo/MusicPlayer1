@@ -5,27 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.MusicPlayer.playerActivity">
+    android:background="@color/songs_by_artist">
+
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/by_title_player"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:padding="16dp"
-        tools:text="titlePLayer"/>
+        tools:text="title"/>
 
     <TextView
         android:id="@+id/by_artist_player"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:padding="16dp"
-        tools:text="artistPlayer"/>
+        tools:text="title"/>
 
     <TextView
         android:id="@+id/by_album_player"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:padding="16dp"
-        tools:text="albumPlayer"/>
+        tools:text="title"/>
+</LinearLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+                        android:src="@drawable/previous" />
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
 
 </LinearLayout>

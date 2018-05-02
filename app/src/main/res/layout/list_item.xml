@@ -4,27 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+      android:padding="16dp">
 
-    <TextView
-        android:id="@+id/by_title_text_view"
+
+    <ImageView
+        android:id="@+id/by_title_image_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:padding="16dp"
-        tools:text="title"/>
+        android:src="@mipmap/ic_launcher"
+        tools:text="title" />
 
-    <TextView
-        android:id="@+id/by_artist_text_view"
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:padding="16dp"
-        tools:text="artist"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
-    <TextView
-        android:id="@+id/by_album_text_view"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:padding="16dp"
-        tools:text="album"/>
+        <TextView
+            android:id="@+id/by_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="title" />
 
+        <TextView
+            android:id="@+id/by_artist_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="artist" />
+
+
+        <TextView
+            android:id="@+id/by_album_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="album" />
+    </LinearLayout>
 </LinearLayout>

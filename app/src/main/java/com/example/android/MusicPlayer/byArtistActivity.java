@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 public class byArtistActivity extends AppCompatActivity {
 
@@ -27,6 +29,11 @@ public class byArtistActivity extends AppCompatActivity {
         songs.add(new Song("Mil Passos", "Soha", "D'ici et d'ailleurs"));
         songs.add(new Song("Su lado de cama ", "Joao Soriano", "El Duque de la Bachata"));
 
+        TreeMap<String, Song> x = new TreeMap<String, Song>();
+        for (Song song : songs) {
+            x.put(song.getdisplayArtist() + song.getdisplayAlbum()+song.getdisplayTitle(), song);
+        }
+        songs = new ArrayList<Song>(x.values());
 
         com.example.android.MusicPlayer.SongAdapter Adapter = new com.example.android.MusicPlayer.SongAdapter(this, songs);
 
@@ -36,6 +43,18 @@ public class byArtistActivity extends AppCompatActivity {
 
         // Find the View that shows the colors category
         ListView songsList = (ListView) findViewById(R.id.songs_list);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Create a new intent to open the {@link ColorsActivity}
+                Intent playerIntent = new Intent(view.getContext(), playerActivity.class);
+                playerIntent.putExtra("currentPosition", position);
+                // Start the new activity
+                startActivity(playerIntent);
+
+            }
+        });
 
     }
 }

@@ -20,8 +20,8 @@
         <activity android:name=".byArtistActivity" />
         <activity android:name=".byTitleActivity" />
         <activity android:name=".playerActivity" />
-
-
+        <activity android:name=".playerlistActivity" />
+        <activity android:name="com.example.android.musicplayer.playerAdapter"></activity>
     </application>
 
 </manifest>
